@@ -657,6 +657,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
                         <toolbar key="toolbar" implicitIdentifier="54E6A075-5134-4A78-BC2A-5131C40A7366" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="3j1-az-JST">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="WeE-mx-KXa"/>
@@ -690,20 +691,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-gR-J87">
-                                <rect key="frame" x="0.0" y="66" width="459" height="263"/>
+                                <rect key="frame" x="0.0" y="38" width="459" height="291"/>
                                 <subviews>
                                     <customView id="pDv-7z-5iL">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="263"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="291"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiA-HH-FHO">
-                                                <rect key="frame" x="0.0" y="1" width="149" height="262"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="291"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="UOT-iC-43M">
-                                                    <rect key="frame" x="1" y="1" width="147" height="260"/>
+                                                    <rect key="frame" x="1" y="1" width="147" height="289"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="KYY-aQ-iib" id="OHT-7s-jij">
-                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="260"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="289"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -848,17 +849,17 @@
                                         </constraints>
                                     </customView>
                                     <customView id="Oar-IR-dGI">
-                                        <rect key="frame" x="146" y="0.0" width="313" height="263"/>
+                                        <rect key="frame" x="146" y="0.0" width="313" height="291"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41x-N5-p36">
-                                                <rect key="frame" x="0.0" y="0.0" width="313" height="263"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="291"/>
                                                 <clipView key="contentView" id="w2G-9c-JIm">
-                                                    <rect key="frame" x="1" y="1" width="311" height="261"/>
+                                                    <rect key="frame" x="1" y="1" width="311" height="289"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <collectionView id="OfA-K9-KTy" customClass="CollectionView" customModule="DemoCollectionView" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="311" height="261"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="311" height="289"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <connections>
@@ -892,7 +893,7 @@
                                 </holdingPriorities>
                             </splitView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="RF2-Cf-aiL">
-                                <rect key="frame" x="0.0" y="29" width="459" height="38"/>
+                                <rect key="frame" x="0.0" y="0.0" width="459" height="38"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-SY-OBK">
                                         <rect key="frame" x="-1" y="0.0" width="53" height="38"/>
@@ -927,10 +928,10 @@
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="RF2-Cf-aiL" secondAttribute="bottom" constant="29" id="4hL-fX-2dh"/>
+                            <constraint firstAttribute="bottom" secondItem="RF2-Cf-aiL" secondAttribute="bottom" id="4hL-fX-2dh"/>
                             <constraint firstItem="v4d-gR-J87" firstAttribute="leading" secondItem="LUY-wT-tqV" secondAttribute="leading" id="6qn-sj-t6Y"/>
                             <constraint firstItem="v4d-gR-J87" firstAttribute="top" secondItem="LUY-wT-tqV" secondAttribute="top" id="HQp-QR-3KS"/>
-                            <constraint firstAttribute="bottom" secondItem="v4d-gR-J87" secondAttribute="bottom" constant="66" id="Ssp-Xm-e3y"/>
+                            <constraint firstAttribute="bottom" secondItem="v4d-gR-J87" secondAttribute="bottom" constant="38" id="Ssp-Xm-e3y"/>
                             <constraint firstItem="RF2-Cf-aiL" firstAttribute="trailing" secondItem="v4d-gR-J87" secondAttribute="trailing" id="X3h-vr-7dN"/>
                             <constraint firstAttribute="trailing" secondItem="v4d-gR-J87" secondAttribute="trailing" id="XTr-Ec-vlj"/>
                             <constraint firstItem="v4d-gR-J87" firstAttribute="leading" secondItem="RF2-Cf-aiL" secondAttribute="leading" id="ht2-l4-Qq6"/>

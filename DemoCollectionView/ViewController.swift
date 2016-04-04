@@ -12,16 +12,12 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var sourceListView : NSOutlineView!
     @IBOutlet weak var collectionView : NSCollectionView!
-//    @IBOutlet weak var collectionViewItem : NSCollectionViewItem!
     var sourceListArray = [AnyObject]()
     var tableListArray = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.itemPrototype = self.storyboard?.instantiateControllerWithIdentifier("collectionViewItem") as? NSCollectionViewItem
-//        self.collectionView.registerNib(NSNib(nibNamed: "CollectionViewItem", bundle: nil), forItemWithIdentifier: "collectionViewItem")
-//        self.collectionView.itemPrototype = CollectionViewItem(nibName: "CollectionViewItem", bundle: nil) as NSCollectionViewItem!
-//        self.collectionView.registerNib(NSNib(nibNamed: "CollectionViewItem", bundle: nil), forItemWithIdentifier: "collectionViewItem")
         // Do any additional setup after loading the view.
     }
 
@@ -41,8 +37,8 @@ class ViewController: NSViewController {
     func outlineView(outlineView: NSOutlineView, isGroupItem item: AnyObject) -> Bool
     {
         let model = item.representedObject as! PersonModel
-        var shouldDisplayGroupButton : Bool = false
-        if (model.isRoot == true){
+        var shouldDisplayGroupButton  = false
+        if model.isRoot == true{
             shouldDisplayGroupButton = true
         }
         return shouldDisplayGroupButton
@@ -54,8 +50,8 @@ class ViewController: NSViewController {
     
     func outlineView(outlineView: NSOutlineView, shouldShowOutlineCellForItem item: AnyObject) -> Bool{
         let model = item.representedObject as! PersonModel
-        var shouldShowOutlineCell : Bool = false
-        if (model.isRoot == true || model.isParent == true)
+        var shouldShowOutlineCell  = false
+        if model.isRoot == true || model.isParent == true
         {
             shouldShowOutlineCell = true
         }
@@ -68,14 +64,14 @@ class ViewController: NSViewController {
     
     func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView?{
         let model = item.representedObject as! PersonModel
-        var tableViewCell : NSTableCellView?
-        if (model.isRoot == true){
+        var tableViewCell: NSTableCellView?
+        if model.isRoot == true{
             tableViewCell = outlineView.makeViewWithIdentifier("HeaderCell", owner: self) as? NSTableCellView
         }
-        else if (model.isParent == true){
+        else if model.isParent == true{
             tableViewCell = outlineView.makeViewWithIdentifier("DataCell", owner: self) as? NSTableCellView
         }
-        else if (model.isChild == true){
+        else if model.isChild == true{
             tableViewCell = outlineView.makeViewWithIdentifier("ChildCell", owner: self) as? NSTableCellView
         }
         return tableViewCell
@@ -89,14 +85,14 @@ class ViewController: NSViewController {
             return
         }
         let item = self.sourceListView.itemAtRow(row)?.representedObject as! PersonModel
-        if (item.name == "Man"){
+        if item.name == "Man"{
             self.willChangeValueForKey("tableListArray")
             self.tableListArray = []
-            if (item.childList.count == 1)
+            if item.childList.count == 1
             {
                 self.tableListArray.append(item.childList[0])
             }
-            else if (item.childList.count > 1)
+            else if item.childList.count > 1
             {
                 self.tableListArray = item.childList
             }
